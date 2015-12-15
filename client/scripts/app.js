@@ -13,7 +13,10 @@ $(function() {
 
     init: function() {
       // Get username
-      app.username = window.location.search.substr(10);
+      app.username = prompt('Enter your username:');
+      while(app.username === "") {
+        app.username = prompt('PLEASE enter your username:');
+      }
 
       // Cache jQuery selectors
       app.$main = $('#main');
