@@ -60,7 +60,7 @@ $(function() {
         url: app.server,
         type: 'GET',
         contentType: 'application/json',
-        //data: { order: '-createdAt'},
+        data: { order: '-createdAt'},
         success: function(data) {
           console.log('chatterbox: Messages fetched');
 
@@ -113,7 +113,7 @@ $(function() {
       }
     },
     populateRooms: function(results) {
-      app.$roomSelect.html('<option value="__newRoom">New room...</option><option value="" selected>Lobby</option></select>');
+      app.$roomSelect.html('<option value="__newRoom">New room...</option></select>');
 
       if (results) {
         var rooms = {};
